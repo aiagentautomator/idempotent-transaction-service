@@ -1,0 +1,77 @@
+{
+  "totalReceived": 6,
+  "processedCount": 4,
+  "duplicateCount": 1,
+  "failedCount": 1,
+  "pendingCount": 0,
+  "retryPendingCount": 0,
+  "accounts": {
+    "ACC-201": {
+      "currency": "USD",
+      "currentBalance": 85.0,
+      "lastProcessedSequence": 3
+    },
+    "ACC-203": {
+      "currency": "USD",
+      "currentBalance": 500.0,
+      "lastProcessedSequence": 5
+    }
+  },
+  "transactionAudit": [
+    {
+      "transactionId": "TXN-2002",
+      "requestId": "REQ-2",
+      "accountId": "ACC-201",
+      "sequence": 2,
+      "type": "DEBIT",
+      "amount": 40.0,
+      "status": "PROCESSED",
+      "retryCount": 0,
+      "failureReason": null
+    },
+    {
+      "transactionId": "TXN-2001",
+      "requestId": "REQ-1",
+      "accountId": "ACC-201",
+      "sequence": 1,
+      "type": "CREDIT",
+      "amount": 100.0,
+      "status": "PROCESSED",
+      "retryCount": 0,
+      "failureReason": null
+    },
+    {
+      "transactionId": "TXN-2003",
+      "requestId": "REQ-3",
+      "accountId": "ACC-201",
+      "sequence": 3,
+      "type": "CREDIT",
+      "amount": 25.0,
+      "status": "PROCESSED",
+      "retryCount": 0,
+      "failureReason": null
+    },
+    {
+      "transactionId": "TXN-2004",
+      "requestId": "REQ-4",
+      "accountId": "ACC-202",
+      "sequence": 4,
+      "type": "DEBIT",
+      "amount": -10.0,
+      "status": "FAILED",
+      "retryCount": 0,
+      "failureReason": "Schema validation error: amount: Value error, Amount must be strictly positive (> 0), got: -10.0"
+    },
+    {
+      "transactionId": "TXN-2005",
+      "requestId": "REQ-5",
+      "accountId": "ACC-203",
+      "sequence": 5,
+      "type": "CREDIT",
+      "amount": 500.0,
+      "status": "PROCESSED",
+      "retryCount": 2,
+      "failureReason": null
+    }
+  ]
+}
